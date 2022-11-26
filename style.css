@@ -1,0 +1,227 @@
+:root{
+ 
+
+    --primary: rgba(112, 18, 124, 0.719);
+     --secondary:rgba(13, 30, 126, 0.856);
+}
+
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    /*always set minHeight*/
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    /*absolute - nav bar isnt fixed to top of the page
+      fixed - stays visible*/
+    position:fixed;
+    top: 0;
+    left:2.5%;
+    width: 95%;
+    height: 12.5vh;
+    background: var(--primary);
+    display: grid;
+    grid-template-columns: repeat(100,auto);
+    grid-template-rows: repeat(100,auto);
+    box-shadow: 1px 1px 10px black;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+nav ul{
+
+  grid-row: 10/90;
+  grid-column: 50/100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+}
+
+nav ul li {
+    
+   
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a {
+
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+
+    color: var(--secondary);
+}
+
+#logo{
+    
+    grid-row: 10/90;
+    grid-column: 10/30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo h1{
+
+    font-size: 48px;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+#logo h1::after{
+ content: "irl";
+ font-size: 14px;
+ text-transform: uppercase;
+}
+#logo h1[id="c"]::after{
+    content: "ode";
+    font-size: 14px;
+    text-transform: uppercase;
+   }
+
+section{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+
+.welcomeMessage{
+    border: solid;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+   
+}
+
+.welcomeMessage h1{
+
+    font-size: 48px;
+    color: var(--primary);
+}
+.one{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.girl{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    height: 100vh;
+    width: 30%;
+    background-image: url(img/BGC-HOME.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider{
+    
+    width: 60%;
+    height: 40vh;
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slider .box{
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+    height: 100%;
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(100,auto);
+    grid-template-rows: repeat(100,auto);
+}
+
+.slider .box .cardImg{
+
+    grid-row: 1/40;
+    grid-column: 1/101;
+    background-image: url('img/Java-Logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.slider .box .cardTitle{
+
+    grid-row: 45/50;
+    grid-column: 1/50;
+    display: flex;
+    align-items: center;
+   justify-content: start;
+}
+
+.slider .box .cardTitle h2{
+
+    font-size: 16px;
+    color: var(--primary);
+    text-transform: capitalize;
+    font-family: sans-serif;
+   
+}
+
+.slider .box .cardDesc{
+
+    font-size: 12px;
+    color: black;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    grid-row: 55/80;
+    grid-column: 1/50;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+   
+}
+
+
+#cardImgOne{
+
+    background-image: url('img/JavaScript-logo.png');
+}
+
+#cardImgTwo{
+
+    background-image: url('img/python.png');
+}
